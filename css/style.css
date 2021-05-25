@@ -9,9 +9,9 @@ body {
     font-size: 1em;
 }
 /******* NAV *******/
-/*nav {
-    border-bottom: solid 1px gray;
-}*/
+nav {
+   background-color: black; 
+}
 nav ul {
     display: flex;
     justify-content:center;
@@ -19,11 +19,16 @@ nav ul {
     flex-direction: row;
     list-style-type: none;
     font-size: 1em;
+    margin: 0 auto;
 }
 
 nav ul li a{
-    color: black;
+    color: white;
     text-decoration: none;
+}
+
+nav ul li{
+    color: white;
 }
 
 button {
@@ -42,7 +47,8 @@ button {
     z-index: -1;
     background: url('../img/meditation.jpg') center no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 150vh;
+    width: 100%;
 }
 
 .main-heading h1 {
@@ -51,7 +57,7 @@ button {
 }
 .main-heading h1 span{
     margin-bottom: 0.75em;
-    color: purple;
+    color: orange;
 }
 /******** Form *********/
 .form-wrapper {
@@ -66,23 +72,10 @@ button {
     padding: 2rem;
 }
 
-/******** About ********/
-.about h2{
-    border-bottom: solid 1px orange;
-    width: 60%;
-    font-size: 2em;
-    padding: 1rem;
-}
-.about p{
-    font-size: 1em;
-    padding: 0.75em;
-    width: 80%;
-}
-
 /******* Review *******/
 
 
-.review {
+#review {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,13 +84,14 @@ button {
 }
 
 .review-heading h3 {
-    font-size: 1.75em;
-    width: 60%;
+    display: flex;
+    justify-content:center;
+    font-size: 2em;
+    width: 100%;
     border-bottom: solid 1px orange;
-    padding-left: 2em;
 }
 
-.review img{
+#review img{
     height: 300px;
     flex-basis: 25%;
     margin: 0;
@@ -109,20 +103,82 @@ button {
     font-size: 1.2em;
     padding: 2em;
 }
+
+/******** About ********/
+#about h2{
+    border-bottom: solid 1px orange;
+    width: 60%;
+    font-size: 2em;
+    padding: 1rem;
+}
+#about p{
+    font-size: 1em;
+    padding: 0.75em;
+    width: 80%;
+    font-weight: bold;
+}
+/********* Amenities *********/
+.amenities-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    border-top: solid 1px orange;
+}
+
+.amenities{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.amenities::after {
+    content: "";
+    background: url('../img/rocks.jpg') center no-repeat;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position:fixed;
+    z-index: -1;   
+  }
+
+.amenities article{
+    width: 25%;
+    margin: 2em;
+}
+
+.amenities i {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    margin: 1.5em;
+}
+
+.amenities p{
+    margin: 0;
+    font-weight: bold;
+}
+
 /********* Footer **********/
 .footer-wrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: row;
+    flex-flow: row wrap;
 }
 
-.contact {
+#contact {
     padding: 1em;
     font-size: 1em;
 }
 
 .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     font-size: 1em;
     padding-top: 1.5em;
 }
@@ -135,4 +191,10 @@ button {
 }
 .social-icons p{
     padding: 1em;
+    margin: 0;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
