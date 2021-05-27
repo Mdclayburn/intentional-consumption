@@ -10,7 +10,8 @@ body {
 }
 /******* NAV *******/
 nav {
-   background-color: black; 
+   background-color: black;
+   margin: 0; 
 }
 nav ul {
     display: flex;
@@ -53,12 +54,35 @@ button {
 
 .main-heading h1 {
     font-size: 3em;
-    width: 40%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    margin-bottom: 4em;
 }
 .main-heading h1 span{
     margin-bottom: 0.75em;
-    color: orange;
+    position: absolute;
+    left: 20%;
+    background: -webkit-linear-gradient(
+      35deg,
+      #ffff00,
+      #ffa500
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: fade;
+    animation-duration: 3s;
 }
+
+@keyframes fade {
+    50% {
+      left: 50%;
+      opacity: 0.1;
+    }
+  }
+
 /******** Form *********/
 .form-wrapper {
     display: flex;
@@ -159,6 +183,24 @@ button {
 .amenities p{
     margin: 0;
     font-weight: bold;
+}
+/********* Book **********/
+
+.book-page{
+    background: url('../img/book-background.jpg') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+
+.book-page h2, h3{
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /********* Footer **********/
