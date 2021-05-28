@@ -19,7 +19,7 @@ nav ul {
     align-items: center;
     flex-direction: row;
     list-style-type: none;
-    font-size: 1em;
+    font-size: 2.5em;
     margin: 0 auto;
 }
 
@@ -37,7 +37,7 @@ button {
     border-color: transparent;
     border-right: solid 1px orange;
     padding: 0.75em;
-    margin: 1em;
+    margin: 0;
 }
 /******** Main Header **********/
 
@@ -48,13 +48,13 @@ button {
     z-index: -1;
     background: url('../img/meditation.jpg') center no-repeat;
     background-size: cover;
-    height: 150vh;
+    height: 80vh;
     width: 100%;
 }
 
 .main-heading h1 {
-    font-size: 3em;
-    width: 20%;
+    font-size: 5em;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@ button {
     margin-bottom: 4em;
 }
 .main-heading h1 span{
-    margin-bottom: 0.75em;
+    margin-bottom: 6em;
     position: absolute;
     left: 20%;
     background: -webkit-linear-gradient(
@@ -74,6 +74,7 @@ button {
     -webkit-text-fill-color: transparent;
     animation-name: fade;
     animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes fade {
@@ -94,6 +95,7 @@ button {
     height: 20vh;
     margin: 0 auto;
     padding: 2rem;
+    font-size: 2.5em;
 }
 
 /******* Review *******/
@@ -103,117 +105,136 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row;
+    flex-flow: row wrap;
     background-color: orange;
 }
 
 .review-heading h3 {
     display: flex;
     justify-content:center;
-    font-size: 2em;
+    font-size: 4em;
     width: 100%;
     border-bottom: solid 1px orange;
 }
 
 #review img{
-    height: 300px;
-    flex-basis: 25%;
+    height: 600px;
+    flex-basis: 50%;
     margin: 0;
     padding: 1em;
 }
 
 .review-post{
-    flex-basis: 30%;
-    font-size: 1.2em;
-    padding: 2em;
+    flex-basis: 60%;
+    font-size: 3em;
+    padding: 1em;
 }
 
 /******** About ********/
+.amenities-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    border-top: solid 1px orange;
+    background: linear-gradient(45deg,#ffd633,
+    #ff9933) 
+}
+
 #about h2{
     border-bottom: solid 1px orange;
     width: 60%;
-    font-size: 2em;
+    font-size: 5em;
+    font-weight: bold;
     padding: 1rem;
 }
 #about p{
-    font-size: 1em;
+    font-size: 3em;
+    font-weight:bolder;
     padding: 0.75em;
-    width: 80%;
+    width: 90%;
     font-weight: bold;
 }
 /********* Amenities *********/
-.amenities-wrapper{
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
-    border-top: solid 1px orange;
-}
 
 .amenities{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    border-top: solid 1px orange;
 }
 
-.amenities::after {
-    content: "";
-    background: url('../img/rocks.jpg') center no-repeat;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position:fixed;
-    z-index: -1;   
-  }
-
 .amenities article{
-    width: 25%;
-    margin: 2em;
+    width: 80%;
+    margin: 0.5em;
 }
 
 .amenities i {
-    font-size: 2em;
+    font-size: 4em;
     display: flex;
     justify-content: center;
     margin: 1.5em;
 }
 
 .amenities p{
-    margin: 0;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: 3em;
+    line-height: 3rem;
+    margin-left: 0.5em;
 }
 /********* Book **********/
 
 .book-page{
-    background: url('../img/book-background.jpg') center no-repeat;
-    background-size: cover;
+    background: url('../img/coming-soon.jpg') center repeat;
+    background-size:contain;
     height: 100vh;
     z-index: -1;
     margin: 0;
     padding: 0;
 }
 
-.book-page h2, h3{
-    font-size: 3rem;
-    font-weight: bold;
+/*.book-page h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 8em;
+    margin: 0 auto;
 }
 
+.book-page h2, h3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-weight: bold;
+    padding-left: 1.75em;
+
+}
+.book-page h3{
+    width: 80%;
+    margin-top: 5px;
+    
+}
+*/
 /********* Footer **********/
 .footer-wrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column;
+    border-top: solid 1.5px orange;
 }
 
 #contact {
     padding: 1em;
-    font-size: 1em;
+}
+
+#contact h3 {
+    font-size: 3em;
+}
+
+#contact p{
+    font-size: 2em;
+    text-align: center;
 }
 
 .social{
@@ -222,7 +243,11 @@ button {
     align-items: center;
     flex-direction: column;
     font-size: 1em;
-    padding-top: 1.5em;
+    padding-top: 1em;
+}
+
+.social h3{
+    font-size: 3em;
 }
 
 .social-icons{ 
@@ -230,10 +255,11 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    font-size: 2em;
 }
 .social-icons p{
     padding: 1em;
-    margin: 0;
+    margin-left: 1em;
 }
 .copyright{
     display: flex;
